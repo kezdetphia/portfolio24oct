@@ -15,7 +15,7 @@ import angular from "../assets/icons/angular.svg";
 import django from "../assets/icons/django.svg";
 import flask from "../assets/icons/flask.svg";
 
-function Tools() {
+const Tools = () => {
   const icons = [
     { title: "React", logo: reactIcon },
     { title: "MongoDB", logo: mongo },
@@ -47,6 +47,6 @@ function Tools() {
       ))} */}
     </div>
   );
-}
+};
 
 export default Tools;
