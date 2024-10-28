@@ -6,11 +6,13 @@ import Projects from "./projects/page";
 import Tools from "./skills/page";
 import Intro from "./intro/page";
 import { useRef, useState } from "react";
+import Contact from "./contact/page";
 
 export default function Home() {
   const introRef = useRef(null);
   const projectsRef = useRef(null);
   const toolsRef = useRef(null);
+  const contactRef = useRef(null);
 
   const scrollToSection = (section) => {
     section?.current?.scrollIntoView({
@@ -30,6 +32,7 @@ export default function Home() {
             if (sectionName === "Home") scrollToSection(introRef);
             if (sectionName === "Projects") scrollToSection(projectsRef);
             if (sectionName === "Skills") scrollToSection(toolsRef);
+            if (sectionName === "Contact") scrollToSection(toolsRef);
           }}
         />
       </div>
@@ -49,6 +52,9 @@ export default function Home() {
             </div>
             <div ref={toolsRef}>
               <Tools />
+            </div>
+            <div ref={contactRef}>
+              <Contact />
             </div>
           </div>
         </div>
