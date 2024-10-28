@@ -33,19 +33,21 @@ const Tools = () => {
   ];
 
   return (
-    <div className="w-full grid grid-cols-3 gap-5 gap-y-10">
-      {icons.map((icon, index) => (
-        <div key={index}>
-          <ToolsCard logo={icon?.logo} title={icon.title} />
-          {/* <EvervaultCard icon={icon.logo} title={icon.title} /> */}
-        </div>
-      ))}
-      {/* {icons.map((icon, index) => (
-        <div key={index}>
-          <ToolsCard icon={icon.logo} title={icon.title} />
-        </div>
-      ))} */}
-    </div>
+    <>
+      <div className="text-center md:text-start pb-10">
+        <p className="md:text-8xl text-5xl  font-bold">MY</p>
+        <p className="md:text-8xl text-5xl font-bold text-secondaryTitle">
+          TOOLS
+        </p>
+      </div>
+      <div className="w-full grid grid-cols-3 gap-5 gap-y-10 ">
+        {icons.map((icon, index) => (
+          <div key={index}>
+            <ToolsCard logo={icon?.logo} title={icon.title} />
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 

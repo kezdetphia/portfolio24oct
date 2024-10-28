@@ -9,9 +9,8 @@ import {
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
-export const FloatingNav = ({ navItems, className }) => {
+export const FloatingNav = ({ navItems, className, onNavClick }) => {
   const { scrollYProgress } = useScroll();
-
   const [visible, setVisible] = useState(true);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
@@ -51,16 +50,16 @@ export const FloatingNav = ({ navItems, className }) => {
         )}
       >
         {navItems.map((navItem, idx) => (
-          <Link
-            key={`link=${idx}`}
-            href={navItem.link}
+          <button
+            key={idx}
+            onClick={() => onNavClick(navItem.name)}
             className={cn(
-              "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+              "relative dark:text-neutral-50 flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
             <span className="hidden sm:block text-sm">{navItem.name}</span>
-          </Link>
+          </button>
         ))}
         <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
           <span>Login</span>
