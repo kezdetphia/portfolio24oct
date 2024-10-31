@@ -223,9 +223,9 @@ const cards = [
           Capacitor, making it accessible as a web app and available on both
           Google Play and the App Store. Designed for seamless interactions, it
           allows lawyers and prospective clients to connect and consult with
-          each other professionally for a fee. The platform's architecture is
-          optimized for a responsive and user-friendly experience across mobile
-          and desktop.
+          each other professionally for a fee. The platform&apos;s architecture
+          is optimized for a responsive and user-friendly experience across
+          mobile and desktop.
         </p>
       );
     },
@@ -315,8 +315,8 @@ const cards = [
           features a modern, user-friendly layout showcasing services, client
           testimonials, fitness programs, and an interactive gallery. Optimized
           for all devices, it provides visitors with seamless navigation,
-          highlighting the professional's expertise and encouraging engagement
-          with prospective clients.
+          highlighting the professional&apos;s expertise and encouraging
+          engagement with prospective clients.
         </p>
       );
     },
@@ -331,15 +331,13 @@ const cards = [
     content: () => {
       return (
         <p>
-          "Aawarapan", a Bollywood movie starring Emraan Hashmi, is renowned for
-          its intense storyline and powerful performances. Directed by Mohit
-          Suri, the film has become a significant work in the Indian film
-          industry. <br /> <br />
-          The movie explores themes of love, redemption, and sacrifice,
-          capturing the essence of human emotions and relationships. With a
-          gripping narrative and memorable music, "Aawarapan" has garnered a
-          massive fan following both in India and abroad, solidifying Emraan
-          Hashmi's status as a versatile actor.
+          A sleek and mobile-responsive portfolio website designed for a fitness
+          professional, built with React and styled with Tailwind CSS. This site
+          features a modern, user-friendly layout showcasing services, client
+          testimonials, fitness programs, and an interactive gallery. Optimized
+          for all devices, it provides visitors with seamless navigation,
+          highlighting the professional&apos;s expertise and encouraging
+          engagement with prospective clients.
         </p>
       );
     },
