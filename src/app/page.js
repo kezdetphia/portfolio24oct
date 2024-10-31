@@ -1,7 +1,7 @@
 "use client";
-import FloatingNavComp from "@/components/FloatingNavComp";
-import ProfCard from "@/components/ProfCard";
-import ThemeToggle from "@/components/toggleTheme";
+import FloatingNavComp from "../components/FloatingNavComp";
+import ProfCard from "../components/ProfCard";
+import ThemeToggle from "../components/toggleTheme";
 import Projects from "./projects/page";
 import Tools from "./skills/page";
 import Intro from "./intro/page";

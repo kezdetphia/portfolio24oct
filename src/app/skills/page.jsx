@@ -1,4 +1,4 @@
-import ToolsCard from "@/components/Tools";
+import ToolsCard from "../../components/tools";
 import React from "react";
 import reactIcon from "../assets/icons/react.svg";
 import mysql from "../assets/icons/mysql.svg";

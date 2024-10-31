@@ -1,4 +1,4 @@
-import ProjectCard from "@/components/ProjectCards";
+import ProjectCard from "../../components/ProjectCards";
 import React from "react";
 
 function Projects() {
