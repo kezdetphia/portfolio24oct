@@ -2,14 +2,14 @@ import React from "react";
 
 function Intro() {
   return (
-    <div className="pb-20">
+    <div className="pb-20 ">
       <div className="text-center md:text-start pb-5 ">
         <p className="md:text-8xl text-5xl  font-bold ">SOFTWARE</p>
         <p className="md:text-8xl text-5xl font-bold text-secondaryTitle">
           ENGINEER
         </p>
       </div>
-      <p className=" text-secondaryText">
+      <p className=" text-secondaryText ">
         Hi there! I&apos;m a Full Stack Developer with 5 years of experience,
         comfortable on both front and back end. Coding isn&apos;t just my job;
         it&apos;s my favorite hobby, too. I&apos;ve spent a lot of time in the

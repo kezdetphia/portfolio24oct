@@ -6,7 +6,7 @@ import { useOutsideClick } from "../hooks/outside-click";
 import profImg from "../app/assets/profPic.png";
 import t100 from "../app/assets/t100.png";
 import gsa from "../app/assets/gsa.png";
-import beepolaroid from "../app/assets/beepolaroid.png";
+import beepol from "../app/assets/beepol.png";
 import lawmato from "../app/assets/lawmato.png";
 import booksey from "../app/assets/booksey.png";
 
@@ -81,7 +81,7 @@ const ProjectCard = () => {
                   height={200}
                   src={active.src}
                   alt={active.title}
-                  className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+                  className="w-full h-80 lg:h-80  sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
                 />
               </motion.div>
 
@@ -117,7 +117,8 @@ const ProjectCard = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                    className="text-neutral-600 text-xs md:text-sm lg:text-base h-80 md:h-40  pb-5 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                    // className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                   >
                     {typeof active.content === "function"
                       ? active.content()
@@ -140,11 +141,11 @@ const ProjectCard = () => {
             <div className="flex gap-4 flex-col md:flex-row items-center  ">
               <motion.div layoutId={`image-${card.title}-${id}`}>
                 <Image
-                  width={100}
-                  height={100}
+                  width={200}
+                  height={200}
                   src={card.src}
                   alt={card.title}
-                  className="h-40 w-80 md:h-14 md:w-14 rounded-lg object-cover object-top  "
+                  className="h-40 w-80 md:h-14 md:w-16 rounded-lg object-cover object-top  "
                 />
               </motion.div>
               <div>
@@ -261,7 +262,7 @@ const cards = [
     description:
       "A dynamic platform enabling writers to share their art and connect with a global audience.",
     title: "BeePolaroid",
-    src: beepolaroid,
+    src: beepol,
     ctaText: "Live",
     ctaLink: "https://sunnysidedown.vercel.app",
     content: () => {

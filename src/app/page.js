@@ -5,7 +5,7 @@ import ThemeToggle from "../components/toggleTheme";
 import Projects from "./projects/page";
 import Tools from "./skills/page";
 import Intro from "./intro/page";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import Contact from "./contact/page";
 
 export default function Home() {
@@ -37,12 +37,12 @@ export default function Home() {
         />
       </div>
       <div className=" flex flex-col md:flex-row  ">
-        <div className="left-pane md:w-2/5 order-2 md:order-1 ">
+        <div className="left-pane md:w-2/5 order-1 md:order-1  ">
           <div className="sticky md:top-0 ">
             <ProfCard />
           </div>
         </div>
-        <div className="right-pane md:w-3/5  p-20 order-1 md:order-2  ">
+        <div className="right-pane md:w-3/5 w-full  md:p-20 p-7 order-2 md:order-2  ">
           <div className="">
             <div ref={introRef}>
               <Intro />
