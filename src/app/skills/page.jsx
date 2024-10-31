@@ -1,6 +1,5 @@
 import ToolsCard from "@/components/Tools";
 import React from "react";
-import { EvervaultCard, Icon } from "../../components/ui/evervault-card";
 import reactIcon from "../assets/icons/react.svg";
 import mysql from "../assets/icons/mysql.svg";
 import next from "../assets/icons/next.svg";
@@ -33,8 +32,8 @@ const Tools = () => {
   ];
 
   return (
-    <>
-      <div className="text-center md:text-start pb-10">
+    <div className="pb-20">
+      <div className="text-center md:text-start pb-5">
         <p className="md:text-8xl text-5xl  font-bold">MY</p>
         <p className="md:text-8xl text-5xl font-bold text-secondaryTitle">
           TOOLS
@@ -47,7 +46,7 @@ const Tools = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

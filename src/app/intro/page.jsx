@@ -2,14 +2,14 @@ import React from "react";
 
 function Intro() {
   return (
-    <>
-      <div className="text-center md:text-start ">
+    <div className="pb-20">
+      <div className="text-center md:text-start pb-5 ">
         <p className="md:text-8xl text-5xl  font-bold ">SOFTWARE</p>
         <p className="md:text-8xl text-5xl font-bold text-secondaryTitle">
           ENGINEER
         </p>
       </div>
-      <p className="pt-10 text-secondaryText">
+      <p className=" text-secondaryText">
         Hi there! I’m a Full Stack Developer with 5 years of experience,
         comfortable on both front and back end. Coding isn’t just my job; it’s
         my favorite hobby, too. I’ve spent a lot of time in the MERN stack (my
@@ -28,7 +28,7 @@ function Intro() {
         built with React Native, which I’m excited to release in 2025. (More on
         that when the time is right!)
       </p>
-    </>
+    </div>
   );
 }
 

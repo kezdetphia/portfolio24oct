@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Label } from "../components/ui/label";
 import { Input } from "../components/ui/input";
 import { cn } from "@/lib/utils";
@@ -8,12 +8,55 @@ import {
   IconBrandGoogle,
   IconBrandOnlyfans,
 } from "@tabler/icons-react";
+import emailjs from "emailjs-com";
 
 const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [statusMessage, setStatusMessage] = useState("");
+
+  console.log("Service ID:", process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID);
+  console.log("Template ID:", process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID);
+  console.log("User ID:", process.env.NEXT_PUBLIC_EMAIL_USER_ID);
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted");
+
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
+        // templateParams,
+        formData,
+        process.env.NEXT_PUBLIC_EMAIL_USER_ID
+      )
+      .then(
+        (result) => {
+          setStatusMessage("Message sent successfully!");
+        },
+        (error) => {
+          setStatusMessage("Failed to send message. Please try again.");
+        }
+      );
+
+    // Clear form data after submission
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+    });
   };
+
   return (
     <div className=" w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
@@ -31,12 +74,26 @@ const ContactForm = () => {
           </LabelInputContainer> */}
           <LabelInputContainer>
             <Label htmlFor="name">Your Name</Label>
-            <Input id="lastname" placeholder="Neo" type="text" />
+            <Input
+              id="name"
+              placeholder="Neo"
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+            />
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Email Address</Label>
-          <Input id="email" placeholder="neo@matrix.com" type="email" />
+          <Input
+            id="email"
+            placeholder="neo@matrix.com"
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+          />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="message">Your message</Label>
@@ -45,6 +102,9 @@ const ContactForm = () => {
             id="message"
             placeholder="Hi, Mark! I'd love to hire you..."
             type="text"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
           />
         </LabelInputContainer>
 

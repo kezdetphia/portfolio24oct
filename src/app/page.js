@@ -32,7 +32,7 @@ export default function Home() {
             if (sectionName === "Home") scrollToSection(introRef);
             if (sectionName === "Projects") scrollToSection(projectsRef);
             if (sectionName === "Skills") scrollToSection(toolsRef);
-            if (sectionName === "Contact") scrollToSection(toolsRef);
+            if (sectionName === "Contact") scrollToSection(contactRef);
           }}
         />
       </div>

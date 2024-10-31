@@ -8,6 +8,7 @@ import t100 from "../app/assets/t100.png";
 import gsa from "../app/assets/gsa.png";
 import beepolaroid from "../app/assets/beepolaroid.png";
 import lawmato from "../app/assets/lawmato.png";
+import booksey from "../app/assets/booksey.png";
 
 const ProjectCard = () => {
   const [active, setActive] = useState(null);
@@ -225,6 +226,33 @@ const cards = [
           each other professionally for a fee. The platform's architecture is
           optimized for a responsive and user-friendly experience across mobile
           and desktop.
+        </p>
+      );
+    },
+  },
+  {
+    description:
+      "Booking & Management System for private client appointments with a professional.",
+    title: "Booksey",
+    src: booksey,
+    ctaText: "Live",
+    ctaLink: "https://booking-front-six.vercel.app",
+    content: () => {
+      return (
+        <p>
+          Booksey is a sleek, mobile-friendly web app is designed for a private
+          client booking system, making appointment scheduling hassle-free for
+          repeat clients. With a user-friendly interface built on React and a
+          secure Express.js backend powered by MongoDB, clients can easily book
+          their regular services without needing to call in, while admins
+          receive and manage appointments in real-time. Using WebSockets, JWT
+          authentication, context management, optimistic UI update and web
+          tokens, both clients and admins receive instant email notifications
+          about any updates, such as booking changes or cancellations, and the
+          admin can block out dates in advance (like holidays). The app includes
+          Ant Design and Tailwind for a polished, intuitive UI, and boasts
+          seamless live updates. and optimistic UI, ensuring any changes reflect
+          instantly for both clients and admins.
         </p>
       );
     },
