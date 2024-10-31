@@ -63,12 +63,12 @@ const ContactForm = () => {
         Ayye, drop me an email!
       </h2>
       <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
-        Whatever is on your mind, don''t hesitate to shoot me a message. I'll
-        get back to you asap I promise.
+        Whatever is on your mind, don&apos;t hesitate to shoot me a message.
+        I&apos;ll get back to you asap I promise.
       </p>
       <form className="my-8" onSubmit={handleSubmit}>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
-          {/* <LabelInputContainer'
+          {/* <LabelInputContainer&apos;
             <Label htmlFor="firstname">First name</Label>
             <Input id="firstname" placeholder="Tyler" type="text" />
           </LabelInputContainer> */}
